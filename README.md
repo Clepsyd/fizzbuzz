@@ -1,3 +1,3 @@
 # FIZZBUZZ #
 
-Pair programming (Y)
+Pair programming (Y).
