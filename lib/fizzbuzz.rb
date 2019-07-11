@@ -2,14 +2,28 @@
 
 def fizzbuzz(number)
 
+
+  if number.kind_of?(Integer)
   if number % 15 == 0
-    "fizzbuzz"
-  elsif number % 3 == 0 
-    "fizz"
+    return "fizzbuzz"
+  elsif number % 3 == 0
+    return "fizz"
   elsif number % 5 == 0
-    "buzz"
+    return "buzz"
   else
-    number
+    return number
   end
+end
+
+  if number.kind_of?(Array)
+    output = []
+    number.each do |num|
+      output << fizzbuzz(num)
+    end
+    return output
+  end
+
+
+
 
 end
