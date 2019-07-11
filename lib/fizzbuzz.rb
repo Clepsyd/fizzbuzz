@@ -2,18 +2,17 @@
 
 def fizzbuzz(number)
 
-
   if number.kind_of?(Integer)
-  if number % 15 == 0
-    return "fizzbuzz"
-  elsif number % 3 == 0
-    return "fizz"
-  elsif number % 5 == 0
-    return "buzz"
-  else
-    return number
+    if number % 15 == 0
+      return "fizzbuzz"
+    elsif number % 3 == 0
+      return "fizz"
+    elsif number % 5 == 0
+      return "buzz"
+    else
+      return number
+    end
   end
-end
 
   if number.kind_of?(Array)
     output = []
@@ -23,7 +22,12 @@ end
     return output
   end
 
+end
 
+class Object
 
+  def fizzbuzz!
+    self.yield_self {|s| fizzbuzz(s)}
+  end
 
 end
